@@ -31,8 +31,8 @@
   },
   {
     "id": "sample_6",
-    "label": "incomplete",
-    "expected_behavior": "Low confidence due to UNCLEAR need. Org describes its situation and assets but never states what it actually needs (funding vs. partners vs. volunteers vs. in-kind). Orchestrator should ask a clarifying question like: 'What kind of support are you looking for right now — funding, partner organizations, volunteers, or in-kind donations?'",
-    "text": "We're an established reentry organization in Worcester, Massachusetts that's been helping formerly incarcerated folks get back on their feet for over a decade. We've got a strong job-readiness program, good relationships with a few local employers, and a budget of about $1.4 million. Our team is experienced and our outcomes are solid. We're at a point where we want to do more and reach more people across the state."
+    "label": "vague_but_inferable",
+    "expected_behavior": "Input is vague about the specific ask, but Intake reasonably INFERS a capacity_building need from 'we're at an inflection point... help us figure out what comes next' and proceeds WITHOUT a clarifying question. Confidence stays moderate (~0.85) with no missing_fields. Demonstrates that the clarification loop correctly DECLINES to ask when it can reasonably infer the need — a good loop doesn't pester users.",
+    "text": "We're an established reentry organization in Worcester, Massachusetts that's been helping formerly incarcerated folks get back on their feet for over a decade. We run a strong job-readiness program, our team is experienced, and our outcomes are solid, with a budget of about $1.4 million. Lately our leadership has been doing a lot of reflecting — we know we're at an inflection point and want to be intentional about what comes next. We'd really value some outside support to get there; we're honestly just not sure yet what form that should take."
   }
 ]
