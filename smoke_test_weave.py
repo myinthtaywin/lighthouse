@@ -36,8 +36,18 @@ def main() -> None:
     print("\nModel reply:")
     print(reply)
 
+    # Weave logs per-call trace URLs itself (the lines prefixed with "weave:").
+    # Here we also print the project page so you can browse all traces, built
+    # from the client's entity/project.
+    entity = getattr(weave_client, "entity", None)
+    project = getattr(weave_client, "project", None)
+    if entity and project:
+        project_url = f"https://wandb.ai/{entity}/{project}/weave"
+    else:
+        project_url = f"https://wandb.ai/<your-entity>/{WEAVE_PROJECT}/weave"
+
     print("\nWeave project URL:")
-    print(weave_client.ui_url)
+    print(project_url)
     print(
         "\nOpen the URL above and confirm you see a trace for `say_hello`."
     )
