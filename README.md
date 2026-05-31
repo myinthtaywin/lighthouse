@@ -174,9 +174,19 @@ lighthouse/
 
 ---
 
-## Demo
+## 📹 Demo
 
-📹 Demo video: _[link]_
+**Video walkthrough (under 2 min):** https://youtu.be/VmxF-vfuJ_g
+
+Two runs end to end — a clean baseline (no loops), then an incomplete input that
+triggers both the clarification and refinement loops — followed by the nested
+W&B Weave trace and the live Streamlit UI.
+
+### Streamlit UI
+
+![Lighthouse Streamlit UI](docs/streamlit-demo.png)
+
+Run locally with `streamlit run app.py`.
 
 ---
 
