@@ -1,0 +1,38 @@
+[
+  {
+    "id": "sample_1",
+    "label": "clean",
+    "expected_behavior": "High confidence. Should match cleanly to Massachusetts housing/eviction-prevention grants and capacity resources for a mid-size org.",
+    "text": "We're a housing nonprofit based in Dorchester serving families across Greater Boston who are facing eviction. Our annual budget is about $900,000 and we've been running eviction-prevention and rapid-rehousing case management for six years. We're looking for operating grant funding to expand our case management team. We'd also welcome support strengthening our financial systems as we grow."
+  },
+  {
+    "id": "sample_2",
+    "label": "clean",
+    "expected_behavior": "High confidence. Should match to immigrant-services grants, legal aid partner networks, and fiscal sponsorship given early-stage status.",
+    "text": "Hola, we are a small volunteer-run group in Lynn, Massachusetts supporting recently arrived immigrant and asylum-seeking families. We offer ESOL classes and help people navigate the legal system, but we don't have our own 501(c)(3) yet. Our budget last year was under $80,000. We need grant funding for our ESOL program and help connecting clients with immigration attorneys."
+  },
+  {
+    "id": "sample_3",
+    "label": "messy",
+    "expected_behavior": "Medium-high confidence after extraction. Rambling but key info (food pantry, Greater Boston, mid-size) is present. Should match food-security network, in-kind produce, and equipment resources.",
+    "text": "Okay so where do I even start. We started as a church basement thing back in 2014 when a few of us noticed seniors in the neighborhood weren't eating right, and honestly it just exploded from there, especially after the pandemic. Now we're running a full pantry three days a week out of Somerville and feeding maybe 400 households, lots of seniors but families too. Money's tight, our fridge died last month which was a nightmare. I guess what I'm saying is we need more food coming in reliably and the cold storage situation is becoming a real problem. We run on roughly $600k a year, mostly small donations and one big church grant."
+  },
+  {
+    "id": "sample_4",
+    "label": "messy",
+    "expected_behavior": "Medium confidence after extraction. Mixes backstory and tangents, but youth + arts + early-stage + Greater Boston are extractable. Should match youth grants, arts grants, and skilled-volunteer networks.",
+    "text": "My cousin and I started this after-school thing two years ago because honestly there was nothing for the kids in our building after 3pm and a lot of them are really talented, like one of our kids does these incredible murals. We do art and music mostly, some homework help, for middle schoolers here in Cambridge. We're tiny, maybe $40k a year, all out of pocket and a couple of small donations. I worry constantly about burning out the two of us. We could really use funding but also just more hands — people who can actually teach or mentor would be huge."
+  },
+  {
+    "id": "sample_5",
+    "label": "incomplete",
+    "expected_behavior": "Low confidence due to MISSING geography. Org never states what state/region it operates in, which gates most resources. Orchestrator should ask a clarifying question like: 'What city, state, or region do you primarily operate in?'",
+    "text": "We run a youth mental health program that provides free counseling and peer support groups for teenagers dealing with anxiety and depression. We work with licensed clinicians and serve about 150 young people a year. Our budget is around $700,000. We're looking for grant funding to expand our counseling capacity because demand keeps outpacing what we can offer."
+  },
+  {
+    "id": "sample_6",
+    "label": "incomplete",
+    "expected_behavior": "Low confidence due to UNCLEAR need. Org describes its situation and assets but never states what it actually needs (funding vs. partners vs. volunteers vs. in-kind). Orchestrator should ask a clarifying question like: 'What kind of support are you looking for right now — funding, partner organizations, volunteers, or in-kind donations?'",
+    "text": "We're an established reentry organization in Worcester, Massachusetts that's been helping formerly incarcerated folks get back on their feet for over a decade. We've got a strong job-readiness program, good relationships with a few local employers, and a budget of about $1.4 million. Our team is experienced and our outcomes are solid. We're at a point where we want to do more and reach more people across the state."
+  }
+]
