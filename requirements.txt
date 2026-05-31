@@ -3,3 +3,4 @@ weave
 rich
 pydantic
 python-dotenv
+streamlit
