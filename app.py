@@ -59,11 +59,11 @@ samples = load_samples()
 _label_to_sample = {f"{s['id']}  ({s['label']})": s for s in samples}
 _options = [_CUSTOM] + list(_label_to_sample.keys())
 
-# Seed session state defaults (default to the first sample).
+# Seed session state defaults (default to "— custom —" with an empty box, so
+# the user can type their own description right away).
 if "case_text" not in st.session_state:
-    first_label = _options[1]
-    st.session_state.sample_choice = first_label
-    st.session_state.case_text = _label_to_sample[first_label]["text"]
+    st.session_state.sample_choice = _CUSTOM
+    st.session_state.case_text = ""
     st.session_state.clar_answer = ""
 
 
@@ -109,6 +109,12 @@ with left:
         key="case_text",
         height=180,
     )
+    if st.session_state.sample_choice == _CUSTOM:
+        st.caption(
+            "Paste your own nonprofit description (100–150 words works well): "
+            "what you do, who you serve, your size/location, and what you're "
+            "looking for."
+        )
 with right:
     st.text_input(
         "If the system asks a clarifying question, answer with:",
@@ -241,7 +247,7 @@ if run_clicked:
     answer = (st.session_state.clar_answer or "").strip()
 
     if not text:
-        st.error("Please enter a nonprofit description (or pick an example).")
+        st.warning("Enter a description or pick an example first.")
         st.stop()
 
     try:
