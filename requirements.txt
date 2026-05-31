@@ -1,0 +1,5 @@
+anthropic
+weave
+rich
+pydantic
+python-dotenv
